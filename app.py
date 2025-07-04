@@ -1,6 +1,23 @@
+"""
+AI Tutor - Local AI Study Buddy
+
+A privacy-focused AI tutoring application that runs entirely on your local machine.
+Provides personalized explanations and generates custom quizzes across multiple subjects.
+
+Author: Hariom Kumar
+License: MIT
+Repository: https://github.com/hari7261/AI-Tutor
+"""
+
 import streamlit as st
 import ollama
 import random
+from typing import List, Optional
+import logging
+
+# Configure logging for debugging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Function to get available models
 @st.cache_data

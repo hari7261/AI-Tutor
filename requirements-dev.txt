@@ -1,0 +1,8 @@
+pytest>=7.0.0
+pytest-cov>=4.0.0
+flake8>=5.0.0
+black>=22.0.0
+mypy>=0.991
+pre-commit>=2.20.0
+coverage>=6.0
+bandit>=1.7.0
