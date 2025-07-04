@@ -1,0 +1,85 @@
+# AI Tutor Model Configuration
+# This file defines model preferences and subject-specific recommendations
+
+# Model priority order (first available will be selected)
+preferred_models:
+  - "gemma3:latest"
+  - "gemma3"
+  - "deepseek-coder:latest" 
+  - "deepseek-coder"
+  - "llama3:latest"
+  - "llama3"
+  - "gemma2:2b"
+  - "mistral"
+
+# Subject-specific model recommendations
+subject_models:
+  "Computer Science": "deepseek-coder"
+  "Programming": "deepseek-coder"
+  "Math": "gemma3"
+  "Physics": "gemma3"
+  "Chemistry": "gemma3"
+  "Biology": "gemma3"
+  "History": "gemma3"
+  "General": "gemma3"
+
+# Model performance characteristics
+model_info:
+  gemma3:
+    size: "3.3GB"
+    speed: "Fast"
+    quality: "Excellent"
+    best_for: ["Education", "General Knowledge", "Explanations"]
+    education_levels: ["School", "High School", "Graduate", "PG/PhD"]
+    
+  deepseek-coder:
+    size: "776MB"
+    speed: "Very Fast"
+    quality: "Excellent for Code"
+    best_for: ["Programming", "Computer Science", "Technical Topics"]
+    education_levels: ["High School", "Graduate", "PG/PhD"]
+    
+  llama3:
+    size: "4.7GB"
+    speed: "Medium"
+    quality: "Very Good"
+    best_for: ["General Purpose", "Research", "Analysis"]
+    education_levels: ["Graduate", "PG/PhD"]
+
+# Education level configurations
+education_settings:
+  School:
+    complexity: "basic"
+    vocabulary: "simple"
+    examples: "everyday"
+    depth: "surface"
+    
+  "High School":
+    complexity: "intermediate"
+    vocabulary: "academic"
+    examples: "practical"
+    depth: "moderate"
+    
+  Graduate:
+    complexity: "advanced"
+    vocabulary: "technical"
+    examples: "research-based"
+    depth: "comprehensive"
+    
+  "PG/PhD":
+    complexity: "expert"
+    vocabulary: "specialized"
+    examples: "cutting-edge"
+    depth: "exhaustive"
+
+# Generation parameters for different modes
+generation_params:
+  explanation:
+    temperature: 0.7
+    max_tokens: 1000
+    context_length: 2048
+    
+  quiz:
+    temperature: 0.8
+    max_tokens: 800
+    context_length: 1024
